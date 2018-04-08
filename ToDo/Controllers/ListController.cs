@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity;
 
 namespace ToDo.Controllers
 {
+    [Authorize]
     public class ListController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -20,15 +21,19 @@ namespace ToDo.Controllers
         {
             string currentUserId = User.Identity.GetUserId();
             ApplicationUser currentUser = db.Users.FirstOrDefault(user => user.Id == currentUserId);
-            return View(db.ToDoDBlist.ToList(). Where(user => user.User == currentUser));   
+            //var modelList = db.ToDoDBlist.ToList().Where(user => user.User == currentUser);
+            var modelList = db.ToDoDBlist.Where(user => user.User == currentUser).ToList();
+            return View(modelList);   
         }
+
 
         private IEnumerable<ToDoDB> GetList()
         {
             string currentUserId = User.Identity.GetUserId();
             ApplicationUser currentUser = db.Users.FirstOrDefault(user => user.Id == currentUserId);
-            return db.ToDoDBlist.ToList().Where(user => user.User == currentUser);   
+            return db.ToDoDBlist.Where(user => user.User == currentUser).ToList();   
         }
+
         public ActionResult BuildTable()
         {
             return PartialView("_ListControll",GetList());
