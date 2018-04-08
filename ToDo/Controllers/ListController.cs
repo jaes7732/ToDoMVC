@@ -104,7 +104,20 @@ namespace ToDo.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tododb).State = EntityState.Modified;
+                //bugging losting FK when save
+                //db.Entry(tododb).State = EntityState.Modified;
+                var dbModel = db.ToDoDBlist.Where(x=>x.ID == tododb.ID).FirstOrDefault();
+                if (dbModel == null)
+                {
+                    return HttpNotFound();
+                }
+                else
+                {
+                    dbModel.checkList = tododb.checkList;
+                    dbModel.Title = tododb.Title;
+                    dbModel.Description = tododb.Description;
+                    db.SaveChanges();
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
