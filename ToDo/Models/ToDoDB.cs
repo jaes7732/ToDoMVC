@@ -11,7 +11,8 @@ namespace ToDo.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public bool checkList { get; set; }
-
+        //[ForeignKey]
+        public string UserId { get; set; }
         public virtual ApplicationUser User {get; set;}
     }
 }

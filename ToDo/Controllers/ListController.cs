@@ -20,9 +20,9 @@ namespace ToDo.Controllers
         public ActionResult Index()
         {
             string currentUserId = User.Identity.GetUserId();
-            ApplicationUser currentUser = db.Users.FirstOrDefault(user => user.Id == currentUserId);
+            //ApplicationUser currentUser = db.Users.FirstOrDefault(user => user.Id == currentUserId);
             //var modelList = db.ToDoDBlist.ToList().Where(user => user.User == currentUser);
-            var modelList = db.ToDoDBlist.Where(user => user.User == currentUser).ToList();
+            var modelList = db.ToDoDBlist.Where(user => user.UserId == currentUserId).ToList();
             return View(modelList);   
         }
 
@@ -30,8 +30,8 @@ namespace ToDo.Controllers
         private IEnumerable<ToDoDB> GetList()
         {
             string currentUserId = User.Identity.GetUserId();
-            ApplicationUser currentUser = db.Users.FirstOrDefault(user => user.Id == currentUserId);
-            return db.ToDoDBlist.Where(user => user.User == currentUser).ToList();   
+            //ApplicationUser currentUser = db.Users.FirstOrDefault(user => user.Id == currentUserId);
+            return db.ToDoDBlist.Where(user => user.UserId == currentUserId).ToList();   
         }
 
         public ActionResult BuildTable()
@@ -129,7 +129,7 @@ namespace ToDo.Controllers
                 db.Entry(tododb).State = EntityState.Modified;
                 db.SaveChanges();
             }
-            return PartialView("_ListCpntroll", GetList());
+            return PartialView("_ListControll", GetList());
         }
 
         // GET: /List/Delete/5

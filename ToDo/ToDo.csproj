@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201804050257530_ToDoList1.Designer.cs">
       <DependentUpon>201804050257530_ToDoList1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804080405580_A_FKUSER_ID.cs" />
+    <Compile Include="Migrations\201804080405580_A_FKUSER_ID.Designer.cs">
+      <DependentUpon>201804080405580_A_FKUSER_ID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -243,6 +247,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804050257530_ToDoList1.resx">
       <DependentUpon>201804050257530_ToDoList1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804080405580_A_FKUSER_ID.resx">
+      <DependentUpon>201804080405580_A_FKUSER_ID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
