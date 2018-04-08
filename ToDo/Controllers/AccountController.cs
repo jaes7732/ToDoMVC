@@ -36,6 +36,14 @@ namespace ToDo.Controllers
             return View();
         }
 
+
+        [AllowAnonymous]
+        public ActionResult RedirectUnAuthen(string returnUrl)
+        {
+            ViewBag.ReturnUrl = returnUrl;
+            return View("Login");
+        }
+
         //
         // POST: /Account/Login
         [HttpPost]
