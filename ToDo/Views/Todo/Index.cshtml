@@ -2,36 +2,47 @@
     ViewBag.Title = "Angular/Kendo";
 }
 @section Scripts {
-    
-<script src="~/Scripts/angular/angular.min.js"></script>
-<script src="~/Scripts/angular/angular-animate.min.js"></script>
-<script src="~/Scripts/angular/angular-aria.min.js"></script>
-<script src="~/Scripts/angular/angular-messages.min.js"></script>
-<script src="~/Scripts/angular/angular-route.min.js"></script>
-<script src="~/Scripts/angular/angular-sanitize.min.js"></script>
 
-<link href="~/Scripts/kendo/css/kendo.common.css" rel="stylesheet" />
-<link href="~/Scripts/kendo/css/kendo.silver.css" rel="stylesheet" />
-<script src="~/Scripts/kendo/js/jszip.min.js"></script>
-<script src="~/Scripts/kendo/js/kendo.all.min.js"></script>
-<script src="~/Scripts/kendo/js/kendo.modernizr.custom.js"></script>
-<script src="~/Scripts/kendo/js/kendo.timezones.min.js"></script>
+    <script src="~/Scripts/angular/angular.min.js"></script>
+    <script src="~/Scripts/angular/angular-animate.min.js"></script>
+    <script src="~/Scripts/angular/angular-aria.min.js"></script>
+    <script src="~/Scripts/angular/angular-messages.min.js"></script>
+    <script src="~/Scripts/angular/angular-route.min.js"></script>
+    <script src="~/Scripts/angular/angular-sanitize.min.js"></script>
 
-<script src="~/Scripts/app/app.module.js"></script>
+    <link href="~/Scripts/kendo/css/kendo.common.css" rel="stylesheet" />
+    <link href="~/Scripts/kendo/css/kendo.silver.css" rel="stylesheet" />
+    <script src="~/Scripts/kendo/js/jszip.min.js"></script>
+    <script src="~/Scripts/kendo/js/kendo.all.min.js"></script>
+    <script src="~/Scripts/kendo/js/kendo.modernizr.custom.js"></script>
+    <script src="~/Scripts/kendo/js/kendo.timezones.min.js"></script>
+
+    <script src="~/Scripts/app/app.module.js"></script>
 }
 
 
 
 <h2>Test Controller</h2>
 <div ng-app="MyApp">
-    <div ng-controller="HelloController as vm">
-        {{vm.foo}} 
-        <h4 style="padding-top: 2em;">Kendo Example</h4>
+    <div ng-controller="HelloController as vm" ng-cloak>
+        User Input : {{vm.userInput}}
+        <h4 style="padding-top: 2em;">Kendo Dropdown List</h4>
         <select kendo-drop-down-list
-            k-data-text-field="'title'"
-            k-data-value-field="'rank'"
-            k-data-source="vm.productsDataSource"></select>
+                k-ng-model="vm.userInput"
+                k-data-text-field="'title'"
+                k-data-value-field="'rank'"
+                k-data-source="vm.productsDataSource"></select>
     </div>
+
+
+    <div ng-controller="HomeController as vm" ng-cloak>
+        @*{{vm.foo}}*@
+        <h4 style="padding-top: 2em;">Kendo Grid </h4>
+        <div kendo-grid k-options="vm.options"></div>
+
+    </div>
+    @*grid*@
+
 </div>
 
 
