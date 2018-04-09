@@ -26,5 +26,10 @@ namespace ToDo.Controllers
 
             return View();
         }
+
+        public ActionResult JsonSample()
+        {
+            return Json(new { Foo = "bar" }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
