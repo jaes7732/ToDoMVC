@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ToDo.Models.ToDoDB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div id = "tableDiv"> </div>
+
+@section Scripts{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    
+    <script src="~/myscrip/build.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    }
