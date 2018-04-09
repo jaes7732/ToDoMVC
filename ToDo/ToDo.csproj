@@ -196,6 +196,7 @@
     <Content Include="Scripts\angular\angular-sanitize.min.js" />
     <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\angular\angularjs-dropdown-multiselect.min.js" />
+    <Content Include="Scripts\app\app.module.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -320,6 +321,20 @@
     <EmbeddedResource Include="Migrations\201804080405580_A_FKUSER_ID.resx">
       <DependentUpon>201804080405580_A_FKUSER_ID.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{b612056d-0b29-42dc-9a2e-e5b20ab121ac}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repo\Repo.csproj">
+      <Project>{a0578bf1-d198-431c-8b76-7930a406fa11}</Project>
+      <Name>Repo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{22945a89-e06b-44e0-8352-2610ac7368ab}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
