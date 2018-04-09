@@ -1,0 +1,238 @@
+﻿/*USE WEB FONT*/
+/*font-family: 'Lato', sans-serif;*/
+/*font-weight: 300, 400, 700, 900;*/
+
+/*KENDO RESET*/
+.k-grid td {
+	padding: 4px 0.6em;
+	border-width: 1px 0 0 1px;
+}
+input.k-textbox, .k-textbox > input {
+	float: left;
+}
+
+/*FONT AWESOME RESET*/
+i.fa {
+	font-size: 12px;
+}
+
+/*BOOTSTRAP RESET*/
+.btn {
+	font-family: sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.btn-icon {
+    font-family: sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 1px 4px;
+}
+input[type=checkbox], input[type=radio] {
+    margin: 2px 0 0;
+}
+.radio-inline, .checkbox-inline {
+    padding-left: 15px;
+    display: inline-block;
+}
+.control-label {
+	text-align: right;
+	font-weight: 700;
+}
+.form-group {
+    margin-bottom: 6px;
+}
+.form-control {
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.alert-dismissable .close, .alert-dismissible .close {
+    top: -6px;
+}
+
+
+
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #495479;
+	font-size: 11px;
+	margin: 0 auto;
+}
+.header {
+	margin-bottom: 20px;
+}
+.bgHeadtop {
+	background-color: #085f7a;
+	background-image: url(../images/logo.png);
+	height: 100px;
+	background-repeat: no-repeat;
+}
+.bgHeadbottom, .bgFooter {
+	background-color: #333;
+	color: #ddd;
+	padding: 10px 0;
+}
+.bgFooter {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.systemName {
+	margin-left: 230px;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.systemName h4 {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+	font-size: 16px;
+}
+.slog1 {
+	display: block;
+}
+.slog1, .slog2 {
+	color: #b6eeff;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 8px;
+}
+
+.nameHeader {
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+.nameHeader h4 {
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 5px;
+	margin-top: 30px;
+}
+.nameHeader span {
+	font-size: 12px;
+	font-weight: 400;
+}
+
+span.remarkFooter {
+	color: #00C2FA;
+}
+h2.titleMainpage {
+	font-size: 22px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	color: #EF4F00;
+}
+h2.titleMainpage i {
+	margin-right: 10px;
+	font-size: 22px;
+	color: #495479;
+}
+h4.titleSubpage {
+	/*font-family: 'Lato', sans-serif;*/
+    font-family:  sans-serif;
+	font-weight: 700;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	color: #333;
+}
+.titleLine {
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/*RESET PADDING / MARGIN TITLE*/
+.padding-0 {padding: 0;}
+.padding-top-0 {padding-top: 0;}
+.padding-left-0 {padding-left: 0;}
+.padding-bottom-0 {padding-bottom: 0;}
+.padding-right-0 {padding-right: 0;}
+
+.padding-5 {padding: 5px;}
+.padding-top-5 {padding-top: 5px;}
+.padding-left-5 {padding-left: 5px;}
+.padding-bottom-5 {padding-bottom: 5px;}
+.padding-right-5 {padding-right: 5px;}
+
+.padding-10 {padding: 10px;}
+.padding-top-10 {padding-top: 10px;}
+.padding-left-10 {padding-left: 10px;}
+.padding-bottom-10 {padding-bottom: 10px;}
+.padding-right-10 {padding-right: 10px;}
+
+.padding-20 {padding: 20px;}
+.padding-top-20 {padding-top: 20px;}
+.padding-left-20 {padding-left: 20px;}
+.padding-bottom-20 {padding-bottom: 20px;}
+.padding-right-20 {padding-right: 20px;}
+
+.padding-30 {padding: 30px;}
+.padding-top-30 {padding-top: 30px;}
+.padding-left-30 {padding-left: 30px;}
+.padding-bottom-30 {padding-bottom: 30px;}
+.padding-right-30 {padding-right: 30px;}
+.padding-side-5 {
+    padding-left :5px;
+    padding-right:5px;
+}
+.margin-0 {margin: 0;}
+.margin-top-0 {margin-top: 0;}
+.margin-left-0 {margin-left: 0;}
+.margin-bottom-0 {margin-bottom: 0;}
+.margin-right-0 {margin-right: 0;}
+
+
+/*WIDTH*/
+.width-100p {
+	width: 100%;
+}
+.width-90p {
+	width: 90%;
+}
+.width-80p {
+	width: 80%;
+}
+
+
+.btn-itext i {
+	margin-right: 5px;
+	font-size: 12px;
+	color: #05ABE3;
+}
+.btn-itext:active i, .btn-itext:visited i {
+	color: #FFF;
+}
+.ddInline {
+	margin-right: 20px;
+}
+.lastText {
+	display: inline-block;
+	margin-left: 3px;
+	margin-top: 5px;
+}
+.input_disabled { 
+	background-color: #F3E7E7;
+	border: 1px solid #EFC2C2;
+	color:Black;
+}
+
+input[type=text]:disabled {  
+    background: #F5F5F5 !important; 
+}
+input[readonly]{
+    background-color:#F0F0F0 !important; 
+    color:#092d45 !important;
+}
+full {
+    width:100%
+}
